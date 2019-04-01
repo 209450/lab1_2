@@ -38,4 +38,10 @@ public class MoneyTest {
         assertThat("90.00 €", is(result.toString()));
     }
 
+    @Test(expected = IllegalArgumentException.class) public void subtractTooBigValue() {
+        moneySecound = new Money(1000,"UER");
+        Money result = money.subtract(moneySecound);
+    }
+
+
 }
