@@ -43,5 +43,8 @@ public class MoneyTest {
         Money result = money.subtract(moneySecound);
     }
 
+    @Test public void multiplyByDouble3() {
+        assertThat("300.00 €", is(money.multiplyBy(3d).toString()));
+    }
 
 }
