@@ -56,5 +56,7 @@ public class MoneyTest {
         assertThat(true,is(money.greaterThan(moneySecound)));
     }
 
-
+    @Test public void greaterThanForLowerBasicValueWithCompatibleCurrency() {
+        assertThat(false,is(moneySecound.greaterThan(money)));
+    }
 }
