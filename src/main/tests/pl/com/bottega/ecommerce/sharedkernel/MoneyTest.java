@@ -47,4 +47,8 @@ public class MoneyTest {
         assertThat("300.00 €", is(money.multiplyBy(3d).toString()));
     }
 
+    @Test public void multiplyByNegativeDouble3() {
+        money.multiplyBy(-3d);
+        assertThat("100.00 €", is(money.toString()));
+    }
 }
