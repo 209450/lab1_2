@@ -33,5 +33,9 @@ public class MoneyTest {
         money.subtract(otherMoney);
     }
 
+    @Test public void subtractMoneyWithCompatibleCurrency() {
+        Money result = money.subtract(moneySecound);
+        assertThat("90.00 €", is(result.toString()));
+    }
 
 }
