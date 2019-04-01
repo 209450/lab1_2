@@ -68,4 +68,13 @@ public class MoneyTest {
         assertThat(true,is(moneySecound.lessThan(money)));
     }
 
+    @Test public void lessOrEqualWithCompatibleCurrency() {
+        assertThat(true,is(moneySecound.lessOrEquals(money)));
+        moneySecound = new Money(100,"EUR");
+        assertThat(true,is(moneySecound.lessOrEquals(money)));
+    }
+
+    @Test public void lessOrEqualWithNotCompatibleCurrency() {
+        assertThat(true,is(money.lessOrEquals(otherMoney)));
+    }
 }
