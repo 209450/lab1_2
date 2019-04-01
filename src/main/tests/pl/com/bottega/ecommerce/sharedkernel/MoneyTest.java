@@ -51,4 +51,10 @@ public class MoneyTest {
         money.multiplyBy(-3d);
         assertThat("100.00 €", is(money.toString()));
     }
+
+    @Test public void greaterThanForBiggerBasicValueWithCompatibleCurrency() {
+        assertThat(true,is(money.greaterThan(moneySecound)));
+    }
+
+
 }
