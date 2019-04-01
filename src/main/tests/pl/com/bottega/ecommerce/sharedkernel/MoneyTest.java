@@ -29,5 +29,9 @@ public class MoneyTest {
         assertThat("110.00 €", is(result.toString()));
     }
 
+    @Test(expected = IllegalArgumentException.class) public void subtractIncompatibleCurrency() {
+        money.subtract(otherMoney);
+    }
+
 
 }
